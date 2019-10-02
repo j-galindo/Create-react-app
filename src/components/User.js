@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React from "react";
 
-export default class User extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Hello, {this.props.firstName}!</h2>
-      </div>
-    )
-  }
+function User(props) {
+  return (
+    <div>
+    <h2 style={{ backgroundColor: props.theColor }}>
+      Hello, {props.firstName} {props.lastName}!
+    </h2>
+    <img src={props.image} width="370" height="300" />
+  </div>
+  );
 }
+
+export default User;
